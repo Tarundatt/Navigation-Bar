@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navigation-Bar</title>
+	<style type="text/css">
+		/**
+		** Style for Main Navigation
+		**/
+		ul.nav{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		ul.nav li{
+			display: inline-block;
+			float: left;
+			position: relative;
+		}
+		ul.nav li a{
+			display: block;
+			padding: 10px;
+            background: skyblue;
+            color: #fff;
+            text-decoration: none;
+		}
+		ul.nav li a:hover{
+			background: red;
+			color: #fff;
+		}
+		/* For active style */
+		ul.nav li.active a{
+			background: #0F6CEFFF;
+			color: #fff;
+		}
+		/* Style for dropdown menu */
+		ul.nav li ul.dropdown{
+			position: absolute;
+			top: -20000px;
+			display: block;
+			width: 200px;
+			text-align: left;
+			margin: 0;
+			padding: 0;
+		}
+		ul.nav li ul.dropdown li{
+			float: none;
+			display: block;
+		}
+		ul.nav li ul.dropdown li a{}
+		ul.nav li ul.dropdown li a:hover{}
+        /* Style for dropdown triger */
+        ul.nav li:hover ul.dropdown{
+        	top: 40px;
+        	left: 0;
+        }
+	</style>
+</head>
+<body>
+
+    <!-- Start Navigation 1st label -->
+	<ul class="nav">
+		<li><a href="#">Home</a></li>
+		<li class="active"><a href="#">About Us</a></li>
+		<li>
+			<a href="#">Gallery</a>
+			<!-- start dropdown 2nd label -->
+            <ul class="dropdown">
+            	<li><a href="">Gallery 1</a></li>
+            	<li><a href="">Gallery 2</a></li>
+            	<li><a href="">Gallery 3</a></li>
+            	<li><a href="">Gallery 4</a></li>
+            	<li><a href="">Gallery 5</a></li>
+            	<li><a href="">Gallery 6</a></li>
+            </ul>
+            <!-- End dropdown -->
+		</li>
+		<li><a href="#">Contact Us</a></li>
+		<li><a href="#">Information</a></li>
+		<li><a href="#">Help</a></li>
+	</ul>
+	<!-- End Navigation -->
+
+</body>
+</html>
